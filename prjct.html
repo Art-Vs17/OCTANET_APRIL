@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Project Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      background-image: url('3.jpg');
+      background-size: cover; 
+      color: white;
+    }
+
+    h2 {
+      color: white;font-size:20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    ul ul {
+      list-style-type: square;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left: 20px;
+      display: none;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+
+    h3 {
+      color: #007bff;
+      margin-top: 20px;
+    }
+
+    video,
+    audio {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Projects Details</h2>
+  <ul>
+    <li onclick="toggleDescription(this)">MACHINE LEARNING
+      <ul id="ml-projects">
+        <li>Self Driving Car Using Neural Network
+          <p id="self-driving-description">Description: Neural Network used to predict the next movement of a car.</p>
+        </li>
+        <li>Fake News Detection
+          <p id="fake-news-description">Description: Detecting fake news using machine learning algorithms.</p>
+        </li>
+      </ul>
+    </li>
+    <li onclick="toggleDescription(this)">DATABASE [DB]
+      <ul id="db-projects">
+        <li>Vehicle Rental Management
+          <p id="vehicle-management-description">Description: Managing vehicle rentals through a database system.</p>
+        </li>
+        <li>IPL Management System
+          <p id="ipl-management-description">Description: Managing IPL-related data using a database system.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Frontend Demo Video</h3>
+  <video width="640" height="360" controls>
+    <source src="C:\Users\91824\Videos\Recording 2023-10-02 205450.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h3>Soundtrack</h3>
+  <audio controls>
+    <source src="D:\WAVES\April in Detroit.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <script>
+    function toggleDescription(project) {
+      const projectDescriptions = project.querySelector('ul');
+      projectDescriptions.style.display = (projectDescriptions.style.display === 'none' || projectDescriptions.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+
+</html>
